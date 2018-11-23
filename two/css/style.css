@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 60px;
+}
+header{
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+header > .headerInner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 550px;
+}
+header > .headerInner > img{
+    position: absolute;
+    top: 43px;
+}
+header > .headerInner > .searchBox{
+    position: absolute;
+    top: 132px;
+    height: 40px;
+    width: 500px;
+    border: 1px solid rgba(255, 255, 255,0.10);
+    line-height: 40px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255,0.20);
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.1);
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+main{
+    min-width: 1000px;
+    min-height: 698px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main > .mainInner > .row{
+    margin: 20px;
+    position: relative;
+}
+.row:last-child{
+    position: absolute;
+    left: 5em;
+}
+.row:nth-child(2){
+    position: absolute;
+    left: 1em;
+}
+main > .mainInner > .row > .key{
+    display: inline-block;
+    position: relative;
+    width: 70px;
+    height: 60px;
+    background: #37373740 ;
+    border: 1px solid #373737;
+    color: #1A1B1C; border-radius: 6px;
+    box-shadow: 0 0 0 1px #1A1B1C, 0 0 0 2px #1F2020, 0 2px 0 2px #080808;
+    font-size: 20px;
+    font-family: Helvetica;
+    margin: 0 10px;
+    line-height: 60px;
+    text-align: center;
+    user-select:none;
+    font-weight: bolder;
+}
+main > .mainInner > .row > .key > img{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 0px;
+    border-radius: 50%;
+    top: 0px;
+}
+main > .mainInner > .row > .key:active{
+    top: 3px;
+    box-shadow: 0 0 0 1px #1A1B1C, 0 0 0 2px #1F2020, 0 3px 1px 2px #080808;
+
+}
+main > .mainInner > .row > .key > .edit{
+    position: absolute;
+    font-size: 7px;
+    font-family: "Microsoft YaHei UI Light";
+    top: 17px;
+    right: 1px;
+    color: #000000;
+    display: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+main > .mainInner > .row > .key:hover > .edit{
+    display: block;
+}
+footer{}
