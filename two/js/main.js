@@ -8,6 +8,7 @@ var keys = {
 var hash = {'q': 'www.qq.com', 'w': 'weibo.com', 'g': 'github.com', 'b': 'baidu.com', 'e': 'www.ele.me', 'r': 'renren.com', 't': 'tianya.com', 'y': 'youtube.com', 'u': 'uc.com' , 'i': 'iqiyi.com', 'o': 'opera.com', 'p': undefined,  's': 'sohu.com', 'z': 'zhihu.com',
 }
 var hashInLocalStorage = JSON.parse(localStorage.getItem('userHash') || 'null')
+var listenKeypress = true
 if(hashInLocalStorage){
     hash = hashInLocalStorage
 }
@@ -61,9 +62,22 @@ document.body.style.backgroundImage = 'url(image/' + imgIndex + '-min.jpg)'
 
 //监听键盘
 window.onkeypress = function (e) {
-    if(hash[e.key]&& !undefined){
+    if(hash[e.key]&& !undefined&&listenKeypress){
         window.open('https://'+hash[e.key],'_blank')
     }
 }
 
+searchBox.onfocus = function (e) {
+    listenKeypress = false
+}
+searchBox.onkeypress = function (e) {
 
+    if (e.key === 'Enter'){
+       window.open('http://www.google.com/search?q='+searchBox.value)
+        searchBox.value = ''
+    }
+}
+searchBox.onblur = function (e) {
+    listenKeypress = true
+
+}
