@@ -5,7 +5,32 @@ var keys = {
     '2': {0:'z',1:'x',2:'c',3:'v',4:'b',5:'n',6:'m',length:7},
     'length': 3
 }
-var hash = {'q': 'www.qq.com', 'w': 'weibo.com', 'g': 'github.com', 'b': 'baidu.com', 'e': 'www.ele.me', 'r': 'renren.com', 't': 'tianya.com', 'y': 'youtube.com', 'u': 'uc.com' , 'i': 'iqiyi.com', 'o': 'opera.com', 'p': undefined,  's': 'sohu.com', 'z': 'zhihu.com',
+var hash = {a: "twitter.com/",
+    b: "cn.bing.com",
+    c: " ",
+    d: " ",
+    e: " ",
+    f: "facebook.com",
+    g: "github.com",
+    h: " ",
+    i: "www.iciba.com/",
+    j: "jianshu.com",
+    k: " ",
+    l: " ",
+    m: "www.xuetangx.com",
+    n: " ",
+    o: " ",
+    p: " ",
+    q: "www.qq.com",
+    r: " ",
+    s: " ",
+    t: "taobao.com",
+    u: " ",
+    v: " ",
+    w: "zh.wikipedia.org/",
+    x: "xiedaimala.com",
+    y: "youtube.com",
+    z: "zhihu.com",
 }
 var hashInLocalStorage = JSON.parse(localStorage.getItem('userHash') || 'null')
 var listenKeypress = true
